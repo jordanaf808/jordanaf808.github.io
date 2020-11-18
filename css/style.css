@@ -54,7 +54,7 @@ body {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 3em 2em;
 }
 
 img {
@@ -353,7 +353,6 @@ header {
 
 .section__footer--intro {
   width: 100%;
-
 }
 
 .intro__icons{
@@ -398,7 +397,6 @@ header {
     width: calc(100% + 1.5em);
   }
   .icon__img {
-    /* max-width: 100px; */
     max-height: 50px; 
     padding: 0;
   }
@@ -464,6 +462,7 @@ header {
 .about-me {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 4em 2em;
 }
 
 .about-me__img {
