@@ -351,6 +351,23 @@ header {
   max-width: 300px;
 }
 
+.section__footer--intro {
+  width: 100%;
+
+}
+
+.intro__icons{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin:0 auto 1em;
+}  
+
+.icon__img {
+  max-height: 35px; 
+  padding: 0;
+}
+
 @media (min-width: 740px) {
   .intro {
     display: grid;
@@ -379,6 +396,11 @@ header {
     position: relative;
     left: -1.5em;
     width: calc(100% + 1.5em);
+  }
+  .icon__img {
+    /* max-width: 100px; */
+    max-height: 50px; 
+    padding: 0;
   }
 }
 
