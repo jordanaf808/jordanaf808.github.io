@@ -540,7 +540,13 @@ header {
 
 .portfolio__card h2 {
   background: rgba(0,0,0,0);
-  font-size: 2em;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.portfolio__title {
+  font-size: 1.5em;
+  margin-top: 0;
 }
 
 .portfolio__img {
@@ -566,23 +572,6 @@ header {
 
 /* Lightbox */
 
-.portfolio-pages {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-  padding: 5em;
-  background: #333;
-}
-
-.portfolio__page {
-  background: white;
-}
-
-.portfolio__title {
-  font-size: 1.5em;
-  margin-top: 0;
-}
-
 .portfolio-lightbox {
   z-index: 101;
   display: none;
@@ -604,26 +593,28 @@ header {
 
 .portfolio-lightbox__content {
   width: 75%;
-  background: black;
+  background: rgba(0, 0, 0, 0.8);
   padding: 1em;
   position: relative;
 }
 
 .close {
   position: absolute;
-  width: 3em;
-  height: 3em;
-  /* background: red;
+  width: 2em;
+  height: 2em;
+  background: var(--clr-accent);
+  opacity: 80%;
   top: -1em;
-  right: -1em; */
+  right: -1em;
   border-radius: 50%;
   text-decoration: none;
   align-items: center;
   justify-content: center;
-
+  display: flex;
 }
 
 .close::after {
+
   margin: 1em;
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
