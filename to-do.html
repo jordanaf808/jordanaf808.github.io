@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="/css/todos.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+</head>
+<body>
+
+	<header>
+		<div class="logo">
+			<a href="/index.html">
+				<img src="img/New-UW-Logo-1.4.3.png" alt="logo">
+			</a>
+		</div>	
+		<button class="nav-toggle" aria-label="toggle navigation">
+			<span class="hamburger"></span>
+		</button>
+		<nav class="nav">
+			<ul class="nav__list">
+				<li class="nav__item"><a href="/index.html#home" class="nav__link">Home</a></li>
+				<li class="nav__item"><a href="/index.html#services" class="nav__link">My Services</a></li>
+				<li class="nav__item"><a href="/index.html#about" class="nav__link">About Me</a></li>
+				<li class="nav__item"><a href="/index.html#work" class="nav__link">Work</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div id="container">
+		<h1>To-Do List. <span id="toggle-form"><i class="far fa-plus-square"></i></span></h1>
+		<input type="text" class="input" placeholder="Add A New Todo..." name="Add Todo..." maxlength="40">
+
+		<ul>
+			<li><span><i class="fas fa-dumpster-fire"></i></span> Go To class</li>
+			<li><span><i class="fas fa-dumpster-fire"></i></span> Buy Books</li>
+			<li><span><i class="fas fa-dumpster-fire"></i></span> Visit Librarian</li>
+		</ul>
+
+	</div>
+	
+<script type="text/javascript" src="/js/lib/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="/js/todos.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
