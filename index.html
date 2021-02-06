@@ -1,142 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan's Portfolio</title>
 
-  <title>Jordan's Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Quattrocento+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Quattrocento+Sans:wght@400;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css">
-
-</head>
-<body>
-
-<!-- Header -->
-  <header>
-    <div class="logo">
-      <a href="#">
-        <img src="img/New-UW-Logo-1.4.3.png" alt="logo">
-      </a>
-    </div>
-    <button class="nav-toggle" aria-label="toggle navigation">
-      <span class="hamburger"></span>
-    </button>
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-        <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Introduction -->
-  <section class="intro" id="home">
-    <h1 class="section__title section__title--intro tracking-in-expand">
-      Hi, my name is <strong>Jordan Aceves-Foster.</strong>
-    </h1>
-    <p class="section__subtitle section__subtitle--intro">Web Developer</p>
-    <img src="img/Profile Pic.jpg" class="intro__img" alt="Picture of Jordan Aceves-Foster">
-  </section>
-    <div class="intro__icons tracking-in-expand">       
-        <img class="icon__img" src="img/HTML5_logo_and_wordmark.svg" alt="">       
-        <img class="icon__img" src="img/CSS3_logo_and_wordmark.svg" alt="">        
-        <img class="icon__img" src="img/Javascript_badge.svg" alt="">        
-        <img class="icon__img" src="img/nodejs-new-pantone-black.svg" alt="">        
-        <img class="icon__img" src="img/iconfinder_mongodb_1012822.svg" alt="">        
-        <img class="icon__img" src="img/iconfinder_sass_1297046.svg" alt="">
-    </div>
-
-
-<!-- My Services -->
-  <section class="my-services" id="services">
-    <h2 class="section__title section__title--services">What I do</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Design</h3>
-        <p>Let me help you find a design that speaks to you and your clients. I can provide a full graphic set from business cards to web sites. </p>
-      </div> <!-- / service -->
-      <div class="service">
-        <h3>Development</h3>
-        <p>With the latest in web development technology, I can develop efficient and fast performing code that takes your business to the next level.</p>
-      </div> <!-- / service -->
-      <div class="service">
-        <h3>Professionalism</h3>
-        <p>I provide exceptional service with an eye towards detail and clear communication to deliver your product on time. </p>
-      </div> <!-- / service -->
-    </div> <!-- / services -->
-
-    <a href="#work" class="btn">My Work</a>
-  </section>
-
-  <!-- About Me -->
-  <section class="about-me" id="about">
-    <h2 class="section__title section__title--about text-pop-up-top">Who am I?</h2>
-    <p class="section__subtitle section__subtitle--about"> Designer and Developer.
-</p>
-
-    <div class="about-me__body">
-      <p>I have always had a DIY kind of attitude. From working on my car to learning how to surf. I bring that same can-do approach to everything I do.</p>
-      <p>Playing in a band and DJing, I needed a website and logo to spread the word. So what better way to do that then learn yourself. So since then I've been spending every available moment learning the tools of the trade. </p>
-    </div>
-
-    <img class="about-me__img" src="img/Profile Pic.jpg" alt="same picture of Jordan">
-  </section>
-
-  <!-- My Work -->
-  <section class="my-work" id="work">
-    <h2 class="section__title">My Work</h2>
-    <p class="section__subtitle section__subtitle--work">A selection of my work</p>
-
-    <div class="portfolio">
-      <!-- Portfolio Item 01 -->
-      <div class="portfolio__card">
-        <h2>Design Work</h2>
-        <a href="portfolio-design.html" class="portfolio__item">
-          <img src="img/JHB Coaching Color Test 3.1_Logo 6 copy 3.png" alt="portfolio item 1" class="portfolio__img">
-        </a>
-      </div>     
-      <!-- Portfolio Item 02 -->
-      <div class="portfolio__card">
-        <h2>Websites</h2>
-        <a href="https://powerful-spire-44468.herokuapp.com/" class="portfolio__item">
-          <img src="img/New-UW-Logo-1.4.3.png" alt="portfolio item 2" class="portfolio__img">
-        </a>
-      </div>  
-      <!-- Portfolio Item 03 -->
-      <div class="portfolio__card">
-        <h2>Projects</h2>
-        <a href="/to-do.html" class="portfolio__item">
-          <img src="img/HVSS---LOGO---1.1.gif" alt="portfolio item 3" class="portfolio__img">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <a href="#">
+          <img src="img/New-UW-Logo-1.4.3.png" alt="logo" />
         </a>
       </div>
-      <!-- Portfolio Item 05 -->
-      <!-- <a href="portfolio-item.html" class="portfolio__item">
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">My Services</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro" id="home">
+      <h1 class="section__title section__title--intro tracking-in-expand">
+        Hi, my name is <strong>Jordan Aceves-Foster.</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">Web Developer</p>
+      <img
+        src="img/Profile Pic.jpg"
+        class="intro__img"
+        alt="Picture of Jordan Aceves-Foster"
+      />
+    </section>
+    <div class="intro__icons tracking-in-expand">
+      <img class="icon__img" src="img/HTML5_logo_and_wordmark.svg" alt="" />
+      <img class="icon__img" src="img/CSS3_logo_and_wordmark.svg" alt="" />
+      <img class="icon__img" src="img/Javascript_badge.svg" alt="" />
+      <img class="icon__img" src="img/nodejs-new-pantone-black.svg" alt="" />
+      <img class="icon__img" src="img/iconfinder_mongodb_1012822.svg" alt="" />
+      <img class="icon__img" src="img/iconfinder_sass_1297046.svg" alt="" />
+    </div>
+
+    <!-- My Services -->
+    <section class="my-services" id="services">
+      <h2 class="section__title section__title--services">What I do</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Design</h3>
+          <p>
+            Let me help you find a design that speaks to you and your clients. I
+            can provide a full graphic set from business cards to web sites.
+          </p>
+        </div>
+        <!-- / service -->
+        <div class="service">
+          <h3>Development</h3>
+          <p>
+            With the latest in web development technology, I can develop
+            efficient and fast performing code that takes your business to the
+            next level.
+          </p>
+        </div>
+        <!-- / service -->
+        <div class="service">
+          <h3>Professionalism</h3>
+          <p>
+            I provide exceptional service with an eye towards detail and clear
+            communication to deliver your product on time.
+          </p>
+        </div>
+        <!-- / service -->
+      </div>
+      <!-- / services -->
+
+      <a href="#work" class="btn">My Work</a>
+    </section>
+
+    <!-- About Me -->
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about text-pop-up-top">
+        Who am I?
+      </h2>
+      <p class="section__subtitle section__subtitle--about">
+        Designer and Developer.
+      </p>
+
+      <div class="about-me__body">
+        <p>
+          I have always had a DIY kind of attitude. From working on my car to
+          learning how to surf. I bring that same can-do approach to everything
+          I do.
+        </p>
+        <p>
+          Playing in a band and DJing, I needed a website and logo to spread the
+          word. So what better way to do that then learn yourself. So since then
+          I've been spending every available moment learning the tools of the
+          trade.
+        </p>
+      </div>
+
+      <img
+        class="about-me__img"
+        src="img/Profile Pic.jpg"
+        alt="same picture of Jordan"
+      />
+    </section>
+
+    <!-- My Work -->
+    <section class="my-work" id="work">
+      <h2 class="section__title">My Work</h2>
+      <p class="section__subtitle section__subtitle--work">
+        A selection of my work
+      </p>
+
+      <div class="portfolio">
+        <!-- Portfolio Item 01 -->
+        <div class="portfolio__card">
+          <h2>Design Work</h2>
+          <a href="portfolio-design.html" class="portfolio__item">
+            <img
+              src="img/JHB Coaching Color Test 3.1_Logo 6 copy 3.png"
+              alt="portfolio item 1"
+              class="portfolio__img"
+            />
+          </a>
+        </div>
+        <!-- Portfolio Item 02 -->
+        <div class="portfolio__card">
+          <h2>Websites</h2>
+          <a
+            href="https://powerful-spire-44468.herokuapp.com/"
+            class="portfolio__item"
+          >
+            <img
+              src="img/New-UW-Logo-1.4.3.png"
+              alt="portfolio item 2"
+              class="portfolio__img"
+            />
+          </a>
+        </div>
+        <!-- Portfolio Item 03 -->
+        <div class="portfolio__card">
+          <h2>Projects</h2>
+          <a href="portfolio-projects.html" class="portfolio__item">
+            <img
+              src="img/Javascript_badge.svg"
+              alt="portfolio item 3"
+              class="portfolio__img"
+            />
+          </a>
+        </div>
+        <!-- Portfolio Item 05 -->
+        <!-- <a href="portfolio-item.html" class="portfolio__item">
         <img src="img/HIVIBES BUSINESS CARD.jpg" alt="portfolio item 5" class="portfolio__img">
       </a> -->
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <!-- replace with your own email address -->
-  <footer class="footer">
-    <a href="mailto:jordanaf808@gmail.com" class="footer__link">jordanaf808@gmail.com</a>
-    <ul class="social-list">
-      <li class="social-list__item"><a href="https://github.com/jordanaf808" target="_blank" rel="noopener noreferrer" class="social-list__link"><i class="fab fa-github-square"></i></a></li>
-      <li class="social-list__item"><a href="https://www.linkedin.com/in/jordanaf808/" target="_blank" rel="noopener noreferrer" class="social-list__link"><i class="fab fa-linkedin"></i></a></li>
-      <li class="social-list__item"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-list__link"><i class="fab fa-instagram-square"></i></a></li>
-    </ul>
-  </footer>
+    <!-- Footer -->
+    <!-- replace with your own email address -->
+    <footer class="footer">
+      <a href="mailto:jordanaf808@gmail.com" class="footer__link"
+        >jordanaf808@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            href="https://github.com/jordanaf808"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-list__link"
+            ><i class="fab fa-github-square"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a
+            href="https://www.linkedin.com/in/jordanaf808/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-list__link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-list__link"
+            ><i class="fab fa-instagram-square"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
 
-  <script src="js/index.js"></script>
-  <link rel="stylesheet" href="css/animate.css">
-</body>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/animate.css" />
+  </body>
 </html>
