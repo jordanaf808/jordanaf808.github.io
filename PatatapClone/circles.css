@@ -1,0 +1,49 @@
+canvas {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border: 4px solid darkcyan;
+  border-radius: 18px;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: 900;
+  color: darkcyan;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  min-width: 400px;
+  max-width: 1200px;
+  height: 80%;
+  margin: 20px auto;
+}
+/* 
+.card {
+	width: 80%;
+	min-width: 400px;
+	margin: 0 auto;
+	background: #ccc;
+	padding: 20px;
+} */
