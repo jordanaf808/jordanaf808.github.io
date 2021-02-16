@@ -19,7 +19,7 @@
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
-  --fs-h3: 1.5rem;
+  --fs-h3: 1.75rem;
   --fs-body: 1rem;
 
   /* blend 2 shadows for realism */
@@ -27,11 +27,20 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 890px) {
+@media (min-width: 780px) {
   :root {
-    --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
+    --fs-h1: 3.5rem;
+    --fs-h2: 3rem;
     --fs-h3: 2rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+@media (min-width: 980px) {
+  :root {
+    --fs-h1: 4rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 2.5rem;
     --fs-body: 1.125rem;
   }
 }
@@ -43,7 +52,20 @@ html {
 }
 
 body {
-  background: var(--clr-light);
+  background: #ffefba; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #fde0e9,
+    #ffeebe,
+    #fff2aa
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #fde0e9,
+    #ffeec0,
+    #fff2aa
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: var(--clr-dark);
   margin: 0;
   font-family: var(--ff-secondary);
@@ -130,13 +152,16 @@ h3 {
   display: block;
   font-family: var(--ff-primary);
   font-size: var(--fs-h1);
+  margin-top: 1em;
 }
 
 .section__subtitle {
-  margin: 0;
+  margin: -1.5em 0 0 0;
   font-size: var(--fs-h3);
   font-weight: bold;
   box-shadow: 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  z-index: -99;
+  height: fit-content;
 }
 
 .section__subtitle--intro,
@@ -144,13 +169,13 @@ h3 {
   background: var(--clr-accent);
   padding: 0.25em 0.5em;
   font-family: var(--ff-secondary);
-  margin-bottom: 1em;
 }
 
 .section__subtitle--work {
   color: var(--clr-accent);
   font-weight: var(--fw-bold);
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 /* Header */
@@ -325,6 +350,11 @@ header {
     z-index: 2;
   }
 
+  .section__title--intro strong {
+    margin: 1em 0 -2.5em 0;
+    z-index: 9999;
+  }
+
   .section__subtitle--intro {
     align-self: start;
     grid-column: -1 / 1;
@@ -333,7 +363,9 @@ header {
     position: relative;
     left: -1.5em;
     width: calc(100% + 1.5em);
+    /* margin-top: -1.5em; */
   }
+
   .icon__img {
     max-height: 50px;
     padding: 0;
