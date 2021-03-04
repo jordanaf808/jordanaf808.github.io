@@ -36,8 +36,9 @@
     <!-- Header -->
     <header>
       <div class="logo">
-        <a href=""></a>
-        <img src="img/New-UW-Logo-1.4.3.png" alt="logo" />
+        <a href="./index.html">
+          <img src="img/New-UW-Logo-1.4.3.png" alt="logo" />
+        </a>
       </div>
       <button class="nav-toggle" aria-label="toggle navigation">
         <span class="hamburger"></span>
@@ -66,11 +67,13 @@
         class="section__title section__title--intro portfolio-title"
         id="sourceCode"
       >
-        My coding <strong>Projects</strong>
+        My coding
+        <strong
+          class="text-pop-up-top section__subtitle section__subtitle--intro portfolio-subtitle"
+          >Projects</strong
+        >
       </h1>
-      <p
-        class="section__subtitle section__subtitle--intro portfolio-subtitle"
-      ></p>
+
       <svg
         aria-hidden="true"
         focusable="false"
@@ -190,5 +193,6 @@
     </footer>
 
     <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/animate.css" />
   </body>
 </html>
