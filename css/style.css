@@ -184,13 +184,19 @@ header {
   position: sticky;
   display: flex;
   justify-content: space-between;
-  padding: 0.5em;
+  /* padding: 0.5em; */
   top: 0;
   z-index: 100;
   height: 65px;
   align-items: center;
   background: #fceef313;
   box-shadow: 0 2px 16px 0 rgba(31, 38, 135, 0.17);
+}
+
+.header-backdrop {
+  width: 100vw;
+  height: 100%;
+  z-index: 99;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
@@ -198,9 +204,12 @@ header {
 .logo {
   max-width: 70px;
   opacity: 0.9;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 .nav {
+  backdrop-filter: unset;
   position: fixed;
   opacity: 0.95;
   background: var(--clr-dark);
@@ -520,18 +529,22 @@ header {
 .portfolio__card {
   background: var(--clr-dark);
   overflow: hidden;
-  margin: 1em auto;
+  margin: 1em 1em;
   text-align: center;
   border-radius: 30px;
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 350ms linear;
 }
 
 .portfolio__card-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background: linear-gradient(145deg, #e6e6e600, #ffffff51);
   box-shadow: inset 20px 20px 60px #f2f2f211;
   opacity: 0.85;
-  width: 280px;
-  justify-self: center;
+  /* width: 280px; */
+  height: 100%;
+  padding: 1em;
   padding-bottom: 20px;
   overflow: hidden;
 }
@@ -568,6 +581,11 @@ header {
 .portfolio__item:focus {
   position: relative;
   z-index: 2;
+}
+
+.portfolio__item {
+  margin-bottom: 0;
+  display: inline-block;
 }
 
 .portfolio__img:hover,
@@ -683,7 +701,7 @@ header {
 
 .portfolio-item-individual {
   padding: 0 2em 2em;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -695,6 +713,10 @@ header {
 
 .portfolio-img {
   box-shadow: none;
+}
+
+.projects > .portfolio__card-background {
+  width: 320px;
 }
 
 #sourceCode {
