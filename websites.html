@@ -31,7 +31,7 @@
     <!-- Header -->
     <header>
       <div class="logo">
-        <a href="#">
+        <a href="index.html">
           <img src="img/New-UW-Logo-1.4.3.png" alt="logo" />
         </a>
       </div>
@@ -54,16 +54,18 @@
     </header>
 
     <!-- Introduction -->
-    <section class="intro" id="home">
-      <h1 class="section__title section__title--intro tracking-in-expand">
-        Hi, my name is
-        <strong class="text-pop-up-top">Jordan Aceves-Foster.</strong>
+    <section class="website-intro" id="jelpcamp">
+      <h1 class="section__title website__intro--title tracking-in-expand">
+        Welcome To
+        <strong class="text-pop-up-top">Jelp Camp</strong>
       </h1>
-      <p class="section__subtitle section__subtitle--intro">Web Developer</p>
+      <p class="section__subtitle website__intro--subtitle">
+        Find An Adventure Near You
+      </p>
       <img
-        src="img/Profile Pic.jpg"
-        class="intro__img"
-        alt="Picture of Jordan Aceves-Foster"
+        src="img/Yelpcamp-Map.png"
+        class="website__intro--img"
+        alt="picture of Yelpcamp"
       />
     </section>
     <div class="intro__icons tracking-in-expand">
@@ -75,29 +77,54 @@
       <img class="icon__img" src="img/iconfinder_sass_1297046.svg" alt="" />
     </div>
 
+    <!-- About Me -->
+    <section class="about-me" id="about">
+      <h2 class="section__title website__intro--title text-pop-up-top">
+        Search The Recreation.gov Database
+      </h2>
+      <p class="section__subtitle website__intro--subtitle">
+        parks, hikes, campsites, climbing, historic sites, etc...
+      </p>
+
+      <div class="about-me__body">
+        <p>
+          Find your new favorite campground, hiking trail, or fishing spot right
+          here, by searching the national database of recreation facilities, the
+          Recreation Information Database R.I.D.B. Updated regularly with the
+          latest information from fedearal agencies like the National Park
+          Service, Bureau of Land Management, U.S. Forrest Service and The
+          Smithsonian.
+        </p>
+      </div>
+
+      <img
+        class="about-me__img"
+        src="img/Yelpcamp.png"
+        alt="same picture of Jordan"
+      />
+    </section>
+
     <!-- My Services -->
-    <section class="my-services" id="services">
-      <h2 class="section__title section__title--services">What I do</h2>
+    <section class="tech-used" id="services">
+      <h2 class="section__title section__title--services">Tech Used</h2>
       <div class="services">
         <div class="service">
-          <h3>Design</h3>
+          <h3>Node/Express</h3>
           <p>
-            Let me help you find a design that speaks to you and your clients. I
-            can provide a full graphic set from business cards to web sites.
+            Node and Express handle the backend logic, routing, and templating.
           </p>
         </div>
         <!-- / service -->
         <div class="service">
-          <h3>Development</h3>
+          <h3>MongoDB/Mongoose</h3>
           <p>
-            With the latest in web development technology, I can develop
-            efficient and fast performing code that takes your business to the
-            next level.
+            I used MongoDB Atlas cloud to hold the database and Mongoose to help
+            fetch the data.
           </p>
         </div>
         <!-- / service -->
         <div class="service">
-          <h3>Professionalism</h3>
+          <h3>MapboxGL/Passport</h3>
           <p>
             I provide exceptional service with an eye towards detail and clear
             communication to deliver your product on time.
@@ -107,47 +134,12 @@
       </div>
       <!-- / services -->
 
-      <a href="#work" class="btn">My Work</a>
-    </section>
-
-    <!-- About Me -->
-    <section class="about-me" id="about">
-      <h2 class="section__title section__title--about text-pop-up-top">
-        Who am I?
-      </h2>
-      <p class="section__subtitle section__subtitle--about"></p>
-      <div class="about-me__body">
-        <p>
-          I have always had a DIY kind of attitude and I needed a website and
-          logo for my band, so I decided what better way to do that then to
-          teach myself how. It started with online classes through my local
-          library and Udemy, to building my own projects and websites from
-          scratch (and wordpress too).
-        </p>
-        <p>Check some of them out below!</p>
-        <!-- <p>
-          Playing in a band and DJing, I needed a website and logo to spread the
-          word. So what better way to do that then learn yourself. So since then
-          I've been spending every available moment learning the tools of the
-          trade.
-        </p> -->
-        <p>
-          Since then I've spent every available moment learning the tools of the
-          trade and bringing my dreams to reality. I bring that same can-do
-          approach to everything I do.
-        </p>
-      </div>
-
-      <img
-        class="about-me__img"
-        src="img/Profile Pic.jpg"
-        alt="same picture of Jordan"
-      />
+      <a href="#work" class="btn">What Does it Do?</a>
     </section>
 
     <!-- My Work -->
     <section class="my-work" id="work">
-      <h2 class="section__title--work">My Work</h2>
+      <h2 class="section__title">My Work</h2>
       <p class="section__subtitle section__subtitle--work">
         A selection of my work
       </p>
@@ -170,7 +162,10 @@
         <div class="portfolio__card">
           <div class="portfolio__card-background">
             <h2>Websites</h2>
-            <a href="websites.html" class="portfolio__item">
+            <a
+              href="https://powerful-spire-44468.herokuapp.com/"
+              class="portfolio__item"
+            >
               <img
                 src="img/New-UW-Logo-1.4.3.png"
                 alt="portfolio item 2"

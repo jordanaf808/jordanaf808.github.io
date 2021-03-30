@@ -41,7 +41,7 @@
     --fs-h1: 4rem;
     --fs-h2: 3.75rem;
     --fs-h3: 2.5rem;
-    --fs-body: 1.125rem;
+    --fs-body: 1.2rem;
   }
 }
 
@@ -165,6 +165,7 @@ h3 {
 }
 
 .section__subtitle--intro,
+.website__intro--subtitle,
 .section__subtitle--about {
   background: var(--clr-accent);
   padding: 0.25em 0.5em;
@@ -218,7 +219,7 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000;
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
@@ -253,7 +254,7 @@ header {
   position: absolute;
   right: 1em;
   top: 1.2em;
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .nav-open .nav {
@@ -379,7 +380,7 @@ header {
 
   .section__title--intro strong {
     margin: 1em 0 -2.5em 0;
-    z-index: 9999;
+    z-index: 99;
   }
 
   .section__subtitle--intro {
@@ -415,6 +416,9 @@ header {
   color: var(--clr-accent);
   position: relative;
   text-align: center;
+  text-shadow: 0 1px 0 #14806e, 0 2px 0 #14806e, 0 3px 0 #14806e,
+    0 4px 0 #14806e, 0 5px 0 #14806e, 0 6px 0 #14806e, 0 7px 0 #14806e,
+    0 8px 0 #14806e, 0 9px 0 #14806e, 0 50px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* make a little underline accent */
@@ -457,32 +461,42 @@ header {
 
 .about-me {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 1em auto 0;
   padding: 4em 2em;
 }
 
 .about-me__img {
   box-shadow: var(--bs);
   max-width: 300px;
+  margin: 0 auto;
 }
 
-@media (min-width: 600px) {
-  .section__subtitle {
+.about-me__body {
+  margin: 2em 1em 0;
+}
+
+.about-me__body p {
+  text-indent: 2em;
+}
+
+.section__title--about {
+  grid-area: title;
+  /* margin-bottom: -20px; */
+}
+
+@media (min-width: 650px) {
+  /* .section__subtitle {
     box-shadow: none;
-  }
+  } */
 
   .about-me {
     display: grid;
     grid-template-columns: 1fr 200px;
     grid-template-areas:
       'title    img'
-      'subtitle img'
+      'title     img'
       'text     img';
     grid-column-gap: 2em;
-  }
-
-  .section__title--about {
-    grid-area: title;
   }
 
   .section__subtitle--about {
@@ -502,6 +516,10 @@ header {
     position: relative;
     z-index: 2;
   }
+
+  .about-me__body {
+    margin-top: -70px;
+  }
 }
 
 /* My Work */
@@ -510,6 +528,12 @@ header {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   text-align: center;
+}
+
+.section__title--work {
+  text-shadow: 0 1px 0 #777777, 0 2px 0 #777777, 0 3px 0 #777777,
+    0 4px 0 #777777, 0 5px 0 #777777, 0 6px 0 #777777, 0 7px 0 #777777,
+    0 8px 0 #777777, 0 9px 0 #777777, 0 50px 30px rgba(0, 0, 0, 0.3);
 }
 
 .portfolio {
@@ -604,12 +628,22 @@ header {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0.5);
   color: white;
+  background: rgba(0, 0, 0, 0.5);
   /* display: flex; */
   align-items: center;
   justify-content: center;
   padding-top: 10px;
+}
+
+.portfolio-lightbox__bg {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 102;
 }
 
 .portfolio-lightbox:target {
@@ -617,15 +651,19 @@ header {
 }
 
 .portfolio-lightbox__content {
+  height: 85vh;
   width: 80%;
+  min-width: 300px;
   background: rgba(0, 0, 0, 0.8);
   padding: 1em;
   position: relative;
+  z-index: 103;
 }
 
 .portfolio-lightbox__content img {
-  width: 80%;
+  height: 80%;
   margin: 0 auto;
+  object-fit: cover;
 }
 
 .close {
@@ -725,4 +763,52 @@ header {
 
 .code-svg img {
   object-fit: contain;
+}
+
+/*    Website     */
+.tech-used {
+  background-color: var(--clr-dark);
+  background-image: url(../img/safar-safarov-MSN8TFhJ0is-unsplash.jpg);
+  background-size: cover;
+  /* darken image */
+  background-blend-mode: overlay;
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.website__intro--img {
+  box-shadow: var(--bs);
+  width: 75%;
+  max-width: 800px;
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+.website__intro--title {
+  font-weight: var(--fw-reg);
+  text-align: center;
+}
+
+.website__intro--title strong {
+  display: block;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h1);
+  margin-top: 1em;
+}
+
+@media (min-width: 740px) {
+  .website__intro--title strong {
+    margin: 1em 0 -1em 0;
+    z-index: 99;
+  }
+}
+
+.website__intro--subtitle {
+  align-self: start;
+  grid-column: -1 / 1;
+  grid-row: 2;
+  text-align: center;
+  position: relative;
+  /* left: -1.5em; */
+  width: 100%;
 }
