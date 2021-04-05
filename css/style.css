@@ -17,9 +17,9 @@
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
 
-  --fs-h1: 3rem;
+  --fs-h1: 2.75rem;
   --fs-h2: 2.25rem;
-  --fs-h3: 1.75rem;
+  --fs-h3: 2rem;
   --fs-body: 1rem;
 
   /* blend 2 shadows for realism */
@@ -29,8 +29,8 @@
 
 @media (min-width: 780px) {
   :root {
-    --fs-h1: 3.5rem;
-    --fs-h2: 3rem;
+    --fs-h1: 3rem;
+    --fs-h2: 2.5rem;
     --fs-h3: 2rem;
     --fs-body: 1.125rem;
   }
@@ -52,13 +52,7 @@ html {
 }
 
 body {
-  background: #ffefba; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #fde0e9,
-    #ffeebe,
-    #fff2aa
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #ffefba; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to bottom,
     #fde0e9,
@@ -111,7 +105,7 @@ img {
 
 h1.section__title--intro {
   font-family: var(--ff-secondary);
-  font-size: var(--fs-h2);
+  font-size: var(--fs-h1);
 }
 
 h1,
@@ -156,24 +150,30 @@ h3 {
 }
 
 .section__subtitle {
-  margin: -1.5em 0 0 0;
+  font-family: var(--ff-secondary);
   font-size: var(--fs-h3);
   font-weight: bold;
+  background: var(--clr-accent);
   box-shadow: 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
-  z-index: -99;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
+  margin: -1.5em 0 0 0;
+  padding: 0 1em;
+  z-index: -99;
 }
 
-.section__subtitle--intro,
+/* .section__subtitle--intro,
 .website__intro--subtitle,
 .section__subtitle--about {
   background: var(--clr-accent);
-  padding: 0.25em 0.5em;
+  padding: 0 1em;
   font-family: var(--ff-secondary);
-}
+} */
 
 .section__subtitle--work {
   color: var(--clr-accent);
+  background: rgba(0, 0, 0, 0);
   font-weight: var(--fw-bold);
   margin-top: 1em;
   margin-bottom: 1em;
@@ -182,6 +182,7 @@ h3 {
 /* Header */
 
 header {
+  position: -webkit-sticky;
   position: sticky;
   display: flex;
   justify-content: space-between;
@@ -192,6 +193,38 @@ header {
   align-items: center;
   background: #fceef313;
   box-shadow: 0 2px 16px 0 rgba(31, 38, 135, 0.17);
+}
+
+@supports not (
+  (-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px))
+) {
+  .header-backdrop {
+    width: 100vw;
+    height: 100%;
+    z-index: 99;
+    opacity: 0.6;
+    background: linear-gradient(to top, #fde0e9, #ffeec0, #fff2aa);
+  }
+
+  .logo {
+    max-width: 70px;
+    opacity: 0.6 !important;
+    background: linear-gradient(to top, #fde0e9, #ffeec0, #fff2aa);
+  }
+  .nav {
+    background-color: unset;
+    position: fixed;
+    opacity: 0.95;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+  }
 }
 
 .header-backdrop {
@@ -210,6 +243,7 @@ header {
 }
 
 .nav {
+  -webkit-backdrop-filter: unset;
   backdrop-filter: unset;
   position: fixed;
   opacity: 0.95;
@@ -326,8 +360,9 @@ header {
 
 .intro__img {
   box-shadow: var(--bs);
-  max-width: 300px;
-  margin: 0 auto;
+  width: 80%;
+  max-width: 350px;
+  margin: -3px auto;
 }
 
 .section__footer--intro {
@@ -347,20 +382,22 @@ header {
 }
 
 .section__subtitle--intro {
-  /* align-self: start; */
+  align-self: start;
   /* grid-column: -1 / 1;
   grid-row: 2; */
   text-align: center;
-  /* position: relative;
-  left: -1.5em;
-  width: calc(100% + 2.5em); */
+  position: relative;
+  left: -0.5em;
+  /* width: calc(100% + 2.5em); */
   /* margin-top: -1.5em; */
 }
 
-@media (min-width: 740px) {
+@media (min-width: 760px) {
   .intro {
     text-align: unset;
     display: grid;
+    width: -webkit-min-content;
+    width: -moz-min-content;
     width: min-content;
     margin: 0 auto;
     grid-column-gap: 1em;
@@ -368,6 +405,7 @@ header {
     grid-template-areas:
       'img title'
       'img subtitle';
+    grid-template-columns: -webkit-min-content -webkit-max-content;
     grid-template-columns: min-content max-content;
   }
 
@@ -379,24 +417,30 @@ header {
   }
 
   .section__title--intro strong {
-    margin: 1em 0 -2.5em 0;
+    margin: 1.5em 0 -2em 0;
     z-index: 99;
   }
 
   .section__subtitle--intro {
-    align-self: start;
+    /* align-self: start; */
     grid-column: -1 / 1;
     grid-row: 2;
     text-align: right;
     position: relative;
     /* left: -1.5em; */
     width: 100%;
-    /* margin-top: -1.5em; */
   }
 
   .icon__img {
     max-height: 50px;
     padding: 0;
+  }
+}
+
+@media (min-width: 980px) {
+  .section__title--intro strong {
+    margin: 1em 0 -2em 0;
+    z-index: 99;
   }
 }
 
@@ -460,7 +504,7 @@ header {
 /* About Me */
 
 .about-me {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 1em auto 0;
   padding: 4em 2em;
 }
@@ -472,7 +516,7 @@ header {
 }
 
 .about-me__body {
-  margin: 2em 1em 0;
+  padding: 2em 0 0 2em;
 }
 
 .about-me__body p {
@@ -481,6 +525,7 @@ header {
 
 .section__title--about {
   grid-area: title;
+  text-align: center;
   /* margin-bottom: -20px; */
 }
 
@@ -502,7 +547,7 @@ header {
   .section__subtitle--about {
     /* stretch from one side all the way to the other side */
     grid-column: 1 / -1;
-    grid-row: 2;
+    grid-row: 1;
     position: relative;
     left: -1em;
     /* banner sticks out both sides */
@@ -518,6 +563,7 @@ header {
   }
 
   .about-me__body {
+    grid-area: text;
     margin-top: -70px;
   }
 }
@@ -594,6 +640,7 @@ header {
 }
 
 .portfolio__img {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 210px;
   height: 210px;
@@ -663,6 +710,7 @@ header {
 .portfolio-lightbox__content img {
   height: 80%;
   margin: 0 auto;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -762,26 +810,21 @@ header {
 }
 
 .code-svg img {
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
 /*    Website     */
-.tech-used {
-  background-color: var(--clr-dark);
-  background-image: url(../img/safar-safarov-MSN8TFhJ0is-unsplash.jpg);
-  background-size: cover;
-  /* darken image */
-  background-blend-mode: overlay;
-  color: var(--clr-light);
-  text-align: center;
+
+.website {
+  max-width: 1400px;
+  margin: 1em auto 0;
+  padding: 3em 1em;
 }
 
-.website__intro--img {
-  box-shadow: var(--bs);
-  width: 75%;
-  max-width: 800px;
-  min-width: 400px;
-  margin: 0 auto;
+.website__intro {
+  position: relative;
+  text-align: center;
 }
 
 .website__intro--title {
@@ -796,19 +839,94 @@ header {
   margin-top: 1em;
 }
 
+.website__intro--subtitle {
+  align-self: start;
+  /* grid-column: -1 / 1;
+  grid-row: 2; */
+  text-align: center;
+  position: relative;
+  width: 100%;
+  z-index: 20;
+  line-height: 1.25em;
+}
+
+.website__intro--img {
+  box-shadow: var(--bs);
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* object-position: center; */
+}
+
+.website__img--container {
+  min-height: 200px;
+  max-height: 500px;
+  /* height: 100%; */
+  min-width: 250px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.website__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.website__body {
+  padding: 1em 2em;
+}
+
+.tech-used {
+  background-color: var(--clr-dark);
+  background-image: url(../img/safar-safarov-MSN8TFhJ0is-unsplash.jpg);
+  background-size: cover;
+  /* darken image */
+  background-blend-mode: overlay;
+  color: var(--clr-light);
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  .website {
+    display: grid;
+    grid-template-columns: minmax(300px, auto);
+    grid-template-areas:
+      'title  title  img'
+      'title  title  img'
+      'text   text  img'
+      'text   text  img';
+    grid-column-gap: 2em;
+    /* align-items: center; */
+  }
+
+  .website__intro--title {
+    grid-area: title;
+    grid-column: 1 / 3;
+    text-align: center;
+  }
+
+  .website__intro--subtitle {
+    grid-area: title;
+    grid-column: 1 / 3;
+    grid-row: 3;
+  }
+
+  .website__body {
+    grid-area: text;
+  }
+
+  .website__img--container {
+    grid-area: img;
+    padding: 2em 0;
+  }
+}
+
 @media (min-width: 740px) {
   .website__intro--title strong {
     margin: 1em 0 -1em 0;
     z-index: 99;
   }
-}
-
-.website__intro--subtitle {
-  align-self: start;
-  grid-column: -1 / 1;
-  grid-row: 2;
-  text-align: center;
-  position: relative;
-  /* left: -1.5em; */
-  width: 100%;
 }
