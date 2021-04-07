@@ -1,5 +1,6 @@
 {
   "cSpell.ignoreWords": [
     "lightbox"
-  ]
+  ],
+  "liveServer.settings.CustomBrowser": "firefox"
 }
