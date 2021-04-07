@@ -977,3 +977,11 @@ header {
     z-index: 99;
   }
 }
+
+/* PROJECTS PAGE */
+
+.portfolio-subtitle {
+  margin-top: 4rem !important;
+  padding: 1rem 0 !important;
+  left: 0 !important;
+}
