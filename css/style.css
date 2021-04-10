@@ -28,7 +28,7 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 780px) {
+@media (min-width: 760px) {
   :root {
     --fs-h1: 3rem;
     --fs-h2: 2.5rem;
@@ -155,7 +155,8 @@ h3 {
 
 .section__subtitle {
   font-family: var(--ff-secondary);
-  font-size: var(--fs-h4);
+  font-size: var(--fs-h3);
+  /* font-size: var(--fs-h4); */
   font-weight: bold;
   background: var(--clr-accent);
   box-shadow: 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
@@ -206,13 +207,13 @@ header {
     width: 100vw;
     height: 100%;
     z-index: 99;
-    opacity: 0.6;
+    opacity: 0.9;
     background: linear-gradient(to top, #fde0e9, #ffeec0, #fff2aa);
   }
 
   .logo {
     max-width: 70px;
-    opacity: 0.6 !important;
+    opacity: 0.9 !important;
     background: linear-gradient(to top, #fde0e9, #ffeec0, #fff2aa);
   }
   .nav {
@@ -364,9 +365,9 @@ header {
 
 .intro__img {
   box-shadow: var(--bs);
-  width: 80%;
-  min-width: 180px;
-  max-width: 350px;
+  width: min-content;
+  /* min-width: 180px; */
+  max-width: 280px;
   margin: -3px auto;
 }
 
@@ -415,7 +416,6 @@ header {
 
   .intro__img {
     grid-area: img;
-    min-width: 280px;
     position: relative;
     z-index: 2;
   }
@@ -450,6 +450,19 @@ header {
   .section__title--intro strong {
     margin: 1rem 0 -2rem 0;
     z-index: 99;
+  }
+  .intro__img {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section__title--intro strong {
+    margin: 2rem 0 -4rem 0;
+    z-index: 99;
+  }
+  .intro__img {
+    max-width: 380px;
   }
 }
 
@@ -520,7 +533,7 @@ header {
 
 .about-me__img {
   box-shadow: var(--bs);
-  max-width: 300px;
+  max-width: 260px;
   margin: 0 auto;
 }
 
@@ -584,6 +597,10 @@ header {
 @media (min-width: 1200px) {
   .about-me__body {
     margin-top: -7rem;
+  }
+
+  .about-me__img {
+    max-width: 320px;
   }
 }
 
