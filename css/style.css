@@ -676,6 +676,12 @@ header {
   margin-top: 0;
   color: var(--clr-light);
   /* opacity: 1; */
+  padding: 2rem;
+}
+.portfolio-title .portfolio-subtitle {
+  margin: 4rem 0 -2rem 0;
+  padding: 0 !important;
+  line-height: 1.4;
 }
 
 .portfolio__img {
@@ -838,6 +844,7 @@ header {
 
 .portfolio-img {
   box-shadow: none;
+  /* max-width: 280px; */
 }
 
 .projects > .portfolio__card-background {
