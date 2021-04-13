@@ -81,8 +81,12 @@ img {
 }
 
 :focus {
-  outline: 3px solid var(--clr-accent);
-  outline-offset: 3px;
+  outline-color: var(--clr-accent);
+  outline-offset: 2px;
+  -webkit-focus-ring-color: var(--clr-accent);
+  -moz-outline-radius: 10px;
+  /* border: 2px solid var(--clr-accent); */
+  border-radius: 10px;
 }
 
 /* Buttons */
@@ -99,11 +103,24 @@ img {
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
   transition: transform 200ms ease-in-out;
+  border-radius: 10px;
 }
 
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
+
+/* .btn:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+} */
 
 /* Typography */
 
@@ -175,14 +192,6 @@ h3 {
   padding: 0 1em;
   font-family: var(--ff-secondary);
 } */
-
-.section__subtitle--work {
-  color: var(--clr-accent);
-  background: rgba(0, 0, 0, 0);
-  font-weight: var(--fw-bold);
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
 
 /* Header */
 
@@ -484,7 +493,7 @@ header {
   text-align: center;
   text-shadow: 0 1px 0 #14806e, 0 2px 0 #14806e, 0 3px 0 #14806e,
     0 4px 0 #14806e, 0 5px 0 #14806e, 0 6px 0 #14806e, 0 7px 0 #14806e,
-    0 8px 0 #14806e, 0 9px 0 #14806e, 0 50px 30px rgba(0, 0, 0, 0.3);
+    0 8px 0 #14806e, 0 9px 0 #14806e, 0 50px 30px #06493e4d;
 }
 
 /* make a little underline accent */
@@ -618,6 +627,14 @@ header {
     0 8px 0 #777777, 0 9px 0 #777777, 0 50px 30px rgba(0, 0, 0, 0.3);
 }
 
+.section__subtitle--work {
+  color: var(--clr-accent);
+  background: rgba(0, 0, 0, 0);
+  font-weight: var(--fw-bold);
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 .portfolio {
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
@@ -626,21 +643,22 @@ header {
   place-items: center;
 }
 
-.portfolio__item {
-  /* background: var(--clr-accent);
+/* .portfolio__item {
+  background: var(--clr-accent);
   overflow: hidden;
-  margin: 1em auto; */
-  /* object-fit: unset; */
-}
+  margin: 1em auto;
+  object-fit: unset;
+} */
 
 .portfolio__card {
   background: var(--clr-dark);
   overflow: hidden;
   margin: 1em 1em;
   text-align: center;
-  border-radius: 30px;
+  border-radius: 10px;
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 350ms linear;
   width: 90%;
+  height: 90%;
   max-width: 300px;
 }
 
@@ -651,16 +669,22 @@ header {
   background: linear-gradient(145deg, #e6e6e600, #ffffff51);
   box-shadow: inset 20px 20px 60px #f2f2f211;
   opacity: 0.85;
-  /* width: 280px; */
+  width: 100%;
   height: 100%;
-  padding: 1em;
+  padding: 0.5rem;
   padding-bottom: 20px;
   overflow: hidden;
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 350ms linear;
 }
 
-.portfolio__card:hover {
+.portfolio__card:hover,
+.portfolio__card-background:hover {
   transform: scale(1.05);
   opacity: 1;
+}
+
+.portfolio__card-background > p {
+  margin: 0 0 0.5rem;
 }
 
 .portfolio__card h2 {
@@ -692,6 +716,7 @@ header {
   margin: 0 auto;
   opacity: 0.75;
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 350ms linear;
+  border-radius: 10px;
 }
 
 .portfolio__item:focus {
@@ -860,7 +885,7 @@ header {
   object-fit: contain;
 }
 
-/*    Website     */
+/*    Websites     */
 
 .website {
   max-width: 1400px;
@@ -895,6 +920,7 @@ header {
 }
 
 .website__item--title {
+  font-size: var(--fs-h1);
   font-weight: var(--fw-reg);
   text-align: center;
 }
@@ -920,14 +946,6 @@ header {
   border-radius: 10px 10px 0 0;
 }
 
-.website__item--img {
-  box-shadow: var(--bs);
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  /* object-position: center; */
-}
-
 .website__img--container {
   display: block;
   max-height: 350px;
@@ -942,9 +960,17 @@ header {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  -o-object-fit: cover;
   overflow: hidden;
   /* padding: 1rem 2rem; */
   border-radius: 8px;
+  opacity: 0.9;
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 350ms linear;
+}
+
+.website__img:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .website__item--body {
