@@ -890,7 +890,7 @@ header {
 .website {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .website:nth-of-type(odd) {
@@ -939,7 +939,7 @@ header {
   position: relative;
   width: 95%;
   /* min-width: 383px; */
-  margin: -2rem auto 0;
+  margin: -1rem auto 0;
   padding: 0;
   z-index: 20;
   line-height: 1.25em;
@@ -976,18 +976,26 @@ header {
 .website__item--body {
   width: 95%;
   height: min-content;
-  margin: 0 auto;
-  padding: 1em 2em;
+  margin: 0 auto 1rem;
+  padding: 1rem 2rem 1rem;
   background: #ffffffe0;
   border-radius: 0 0 10px 10px;
 }
 
+.website__item--body p {
+  margin: 0 auto;
+}
+
 .website__item--icons {
   grid-column: 1 / -1;
-  display: flex;
   width: 100%;
   justify-content: space-around;
   margin: 0 auto 1em;
+  text-align: center;
+}
+
+.website__item--icons img {
+  margin: 1rem auto;
 }
 
 .tech-used {
@@ -1003,6 +1011,12 @@ header {
 @media (min-width: 450px) {
   .website {
     padding: 2rem;
+  }
+  .website__item--icons {
+    display: flex;
+  }
+  .website__subtitle-tech {
+    display: block;
   }
 }
 
@@ -1055,6 +1069,7 @@ header {
 
   .website__item--body {
     grid-area: text;
+    padding: 2rem 2rem 1rem;
   }
 
   .website__img--container {
@@ -1067,6 +1082,10 @@ header {
 @media (min-width: 920px) {
   .website {
     padding: 3rem;
+  }
+
+  .website__item--body {
+    padding: 3.5rem 2rem 1rem;
   }
 }
 
