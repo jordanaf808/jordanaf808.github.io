@@ -1047,8 +1047,8 @@ header {
       'title  title  img'
       'text   text  img'
       'text   text  img';
-    grid-column-gap: 2em;
-    /* align-items: center; */
+    grid-column-gap: 2rem;
+    align-items: center;
   }
 
   .website:nth-of-type(odd) {
@@ -1109,7 +1109,7 @@ header {
 
 @media (min-width: 1200px) {
   .website__item--title {
-    margin: 1rem 0 -4rem 0;
+    margin: 1rem 0 -1rem 0;
     z-index: 99;
   }
 }
