@@ -403,6 +403,7 @@ header {
 }
 
 .icon__img {
+  max-width: 25%;
   max-height: 35px;
   padding: 0;
 }
@@ -917,9 +918,10 @@ header {
 }
 
 .website:nth-of-type(odd) .website__item--icons {
-  background: #ffffff93;
+  background: linear-gradient(0deg, #e6e6e654, #ffffffe1);
+  box-shadow: inset 20px 20px 60px #f2f2f211;
   border-radius: 10px;
-  border: 2px ridge var(--clr-dark);
+  /* border: 2px ridge var(--clr-dark); */
   padding: 0.5rem;
   /* background-blend-mode: overlay; */
 }
