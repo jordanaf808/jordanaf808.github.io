@@ -215,11 +215,9 @@ h3 {
 
 /* Header */
 
-@supports not(
-  (
+@supports not((
     scroll-padding-top: 65px;
-,
-  )
+)
 ) {
   header {
     position: -webkit-sticky;
