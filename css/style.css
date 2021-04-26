@@ -760,18 +760,29 @@ header {
   }
 }
 
-/* .portfolio__title {
+.portfolio__title {
   font-size: 1.5em;
   margin-top: 0;
   color: var(--clr-light);
   padding: 2rem;
-} */
+}
 
-/* .portfolio-title .portfolio-subtitle {
+.portfolio-title .portfolio-subtitle {
   margin: 4rem 0 -2rem 0;
-  padding: 0 !important;
+  /* padding: 0 !important; */
   line-height: 1.4;
-} */
+}
+
+.portfolio-subtitle {
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  .portfolio-title .portfolio-subtitle {
+    margin: 7rem 0 -5rem 0;
+    line-height: 1.4;
+  }
+}
 
 .portfolio__img {
   -o-object-fit: cover;
