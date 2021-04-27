@@ -72,7 +72,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 65px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -223,8 +223,8 @@ h3 {
 )
 ) {
   header {
-    position: -webkit-sticky;
     position: sticky;
+    position: -webkit-sticky;
     display: flex;
     justify-content: space-between;
     /* padding: 0.5em; */
@@ -240,8 +240,8 @@ h3 {
 }
 
 header {
-  position: -webkit-sticky;
   position: sticky;
+  position: -webkit-sticky;
   display: flex;
   justify-content: space-between;
   /* padding: 0.5em; */
