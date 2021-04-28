@@ -678,6 +678,8 @@ header {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   text-align: center;
+  background: linear-gradient(145deg, #303030, #303030eb, #313131e6);
+  box-shadow: inset 20px 20px 90px #000000b0;
 }
 
 .section__title--work {

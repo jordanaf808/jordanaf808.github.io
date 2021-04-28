@@ -17,10 +17,10 @@
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
 
-  --fs-h1: 2rem;
-  --fs-h2: 1.75rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
+  --fs-h1: 1.5rem;
+  --fs-h2: 1.3rem;
+  --fs-h3: 1.1rem;
+  --fs-body: 0.8rem;
 
   /* blend 2 shadows for realism */
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
@@ -30,7 +30,7 @@
 body {
   font-family: 'Fredericka the Great', Arial, Helvetica, sans-serif;
   font-size: var(--fs-body);
-  line-height: 1.3rem;
+  /* line-height: 1.3rem; */
   background: #1fa2ff; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -46,21 +46,30 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-@media screen and (min-width: 590px) {
+@media screen and (min-width: 390px) {
   :root {
-    --fs-h1: 2.75rem;
+    --fs-h1: 2rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1rem;
+  }
+}
+
+@media screen and (min-width: 790px) {
+  :root {
+    --fs-h1: 2.5rem;
     --fs-h2: 2rem;
     --fs-h3: 1.75rem;
-    --fs-body: 1.2rem;
+    --fs-body: 1.1rem;
   }
 }
 
 @media screen and (min-width: 990px) {
   :root {
     --fs-h1: 3rem;
-    --fs-h2: 2.75rem;
+    --fs-h2: 2.5rem;
     --fs-h3: 2rem;
-    --fs-body: 1.5rem;
+    --fs-body: 1.3rem;
   }
 }
 
@@ -222,6 +231,10 @@ h1 {
 }
 
 #container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 75%;
   min-width: 280px;
   margin: 4rem auto;
@@ -232,18 +245,20 @@ h1 {
 }
 
 #toggle-form {
-  padding: 1rem 0 0.5rem 2rem;
+  padding: 0 1rem 0.5rem;
+  float: right;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 390px) {
-  h1 {
-    text-align: center;
+  #container {
+    min-width: 204px;
   }
   #toggle-form {
     display: block;
     cursor: pointer;
     margin: 0 auto;
-    padding: 1rem 1rem 0;
+    padding: 0 0 0 0.5rem;
     text-align: center;
   }
 }
