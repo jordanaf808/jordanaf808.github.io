@@ -127,7 +127,7 @@ img {
 }
 
 .nav__link {
-  color: inherit;
+  color: var(--clr-light);
   font-family: var(--ff-primary);
   font-weight: var(--fw-bold);
   font-size: var(--fw-reg);
@@ -150,7 +150,7 @@ img {
 }
 
 .nav-open .nav {
-  transform: translateX(70%);
+  transform: translateX(55%);
 }
 
 .nav-open .nav-toggle {
@@ -232,7 +232,7 @@ h1 {
 
 #container {
   position: absolute;
-  top: 0;
+  top: 65px;
   left: 0;
   right: 0;
   width: 75%;
