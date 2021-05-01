@@ -442,11 +442,13 @@ header {
   width: 100vw;
   justify-content: space-around;
   margin: 0 auto 1em;
+  padding: 0;
 }
 
 .icon__img {
-  max-width: 25%;
-  max-height: 35px;
+  /* width: 5rem; */
+  max-width: 10%;
+  max-height: 30px;
   padding: 0;
 }
 
@@ -509,7 +511,7 @@ header {
   }
 
   .icon__img {
-    max-height: 50px;
+    max-height: 40px;
     padding: 0;
   }
 }
