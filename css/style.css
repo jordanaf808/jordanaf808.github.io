@@ -21,7 +21,7 @@
   --fs-h2: 2rem;
   --fs-h3: 1.75rem;
   --fs-h4: 1.5rem;
-  --fs-body: 1rem;
+  --fs-body: 1.2rem;
 
   /* blend 2 shadows for realism */
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
@@ -62,7 +62,7 @@
     --fs-h1: 4rem;
     --fs-h2: 3rem;
     --fs-h3: 2.5rem;
-    --fs-h4: 2rem;
+    --fs-h4: 1.6rem;
     --fs-body: 1.2rem;
   }
 }
@@ -629,6 +629,8 @@ header {
 
 .about-me__body {
   padding: 2rem 2rem 0 3rem;
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
 }
 
 .about-me__body p {
