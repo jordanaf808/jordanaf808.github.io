@@ -1,5 +1,13 @@
 /* Animations */
 
+:root{
+  --text-shadow: 0 1px 0 #f8f8f8, 0 2px 0 #f8f8f8, 0 3px 0 #f8f8f8,
+  0 4px 0 #f8f8f8, 0 5px 0 #f8f8f8, 0 6px 0 #f8f8f8, 0 7px 0 #f8f8f8, 0 20px 30px rgba(0, 0, 0, 0.3);
+  --text-shadow__dark: 0 1px 0 #777777, 0 2px 0 #777777, 0 3px 0 #777777,
+  0 4px 0 #777777, 0 5px 0 #777777, 0 6px 0 #777777, 0 7px 0 #777777,
+  0 8px 0 #777777, 0 20px 30px rgba(0, 0, 0, 0.3);    
+}
+
 .tracking-in-expand {
   -webkit-animation: tracking-in-expand 2.5s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
@@ -72,9 +80,7 @@
     transform: translateY(-40px);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #f8f8f8, 0 2px 0 #f8f8f8, 0 3px 0 #f8f8f8,
-      0 4px 0 #f8f8f8, 0 5px 0 #f8f8f8, 0 6px 0 #f8f8f8, 0 7px 0 #f8f8f8,
-      0 8px 0 #f8f8f8, 0 9px 0 #f8f8f8, 0 20px 30px rgba(0, 0, 0, 0.3);
+    text-shadow: --text-shadow;
   }
 }
 @keyframes text-pop-up-top {
@@ -99,9 +105,7 @@
     transform: translateY(-40px);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #f8f8f8, 0 2px 0 #f8f8f8, 0 3px 0 #f8f8f8,
-      0 4px 0 #f8f8f8, 0 5px 0 #f8f8f8, 0 6px 0 #f8f8f8, 0 7px 0 #f8f8f8,
-      0 8px 0 #f8f8f8, 0 9px 0 #f8f8f8, 0 20px 30px rgba(0, 0, 0, 0.3);
+    text-shadow: var(--text-shadow);
   }
 }
 
@@ -133,9 +137,7 @@
     transform: translateY(-40px);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #777777, 0 2px 0 #777777, 0 3px 0 #777777,
-      0 4px 0 #777777, 0 5px 0 #777777, 0 6px 0 #777777, 0 7px 0 #777777,
-      0 8px 0 #777777, 0 9px 0 #777777, 0 20px 30px rgba(0, 0, 0, 0.3);
+    text-shadow: var(--text-shadow__dark);
   }
 }
 @keyframes text-pop-up-top-dark {
@@ -160,8 +162,6 @@
     transform: translateY(-40px);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #777777, 0 2px 0 #777777, 0 3px 0 #777777,
-      0 4px 0 #777777, 0 5px 0 #777777, 0 6px 0 #777777, 0 7px 0 #777777,
-      0 8px 0 #777777, 0 9px 0 #777777, 0 20px 30px rgba(0, 0, 0, 0.3);
+    text-shadow: var(--text-shadow__dark);
   }
 }
